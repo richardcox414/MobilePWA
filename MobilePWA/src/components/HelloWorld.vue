@@ -51,7 +51,7 @@
                 this.post = null;
                 this.loading = true;
 
-                fetch('weatherforecast')
+                fetch('https://localhost:5001/weatherforecast')
                     .then(r => r.json())
                     .then(json => {
                         this.post = json;
