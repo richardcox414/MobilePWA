@@ -3,7 +3,7 @@
         <div v-if="loading" class="loading">
             Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationvue">https://aka.ms/jspsintegrationvue</a> for more details.
         </div>
-
+        <button @click="callMessage" class="btn btn-primary">Add Bottom right message</button>
         <div v-if="post" class="content">
             <table>
                 <thead>
@@ -47,6 +47,16 @@
             '$route': 'fetchData'
         },
         methods: {
+
+            callMessage() {
+                this.$snotify.info('Example body content', 'Example title', {
+                    timeout: 2000,
+                    showProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true
+                });
+            },
+
             fetchData() {
                 this.post = null;
                 this.loading = true;

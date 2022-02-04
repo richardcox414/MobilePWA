@@ -1,5 +1,6 @@
 <template>
-    <div id="app" style="margin-top:0px">
+    <div id="app" class="mt-0">
+        <vue-snotify></vue-snotify>
         <b-navbar toggleable="lg" type="dark" variant="dark">
             <b-navbar-brand href="#">KL Mobile</b-navbar-brand>
 
@@ -10,13 +11,8 @@
                     <b-nav-item href="#">Link</b-nav-item>
                     <b-nav-item href="#" disabled>Disabled</b-nav-item>
                 </b-navbar-nav>
-
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-form>
-                        <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-                        <b-button size="sm" class="my-2 my-sm-0" variant="outline-info" type="submit">Search</b-button>
-                    </b-nav-form>                   
                     <b-nav-item-dropdown right>
                         <!-- Using 'button-content' slot -->
                         <template #button-content>
